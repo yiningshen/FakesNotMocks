@@ -1,6 +1,11 @@
-public class FakeExchange implements Exchange{
+public class FakeExchange implements Exchange {
 
   public float rate(String origin, String target) {
-    return 1;
-  }
+    float rateNum = 0;
+    if ("USD".equals(origin) && "Euro".equals(target)) {
+     rateNum = 1;
+    }
+    return rateNum;
+  };
+  
 }
